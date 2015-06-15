@@ -1,0 +1,85 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.primary-menu {
+  list-style: none;
+  float: left;
+  overflow: hidden;
+  @include breakpoint(medium) {
+    float: none;
+    display: none;
+  }
+  @media (min-width: 992px) {
+    display: block !important;
+  }
+  .primary-menu__item {
+    float: left;
+    @include breakpoint(medium) {
+      float: none;
+    }
+  }
+  .primary-menu__url {
+    font: 14px/14px 'robotomedium';
+    color: #C6C6C6;
+    text-decoration: none;
+    padding: 16px 25px 14px 25px;
+    display: block;
+    transition: all 0.2s linear;
+    &.active, &:hover {
+      color: #FFF;
+      background: url("../img/page_bg.jpg") no-repeat #242424;
+    }
+  }
+}
+
+.secondary-menu {
+  list-style: none;
+  float: right;
+  @include breakpoint(small) {
+    float: none;
+    width: 100%;
+  }
+  .secondary-menu__item {
+    float: left;
+    @include breakpoint(small) {
+      float: none;
+    }
+  }
+  .secondary-menu__url {
+    color: #8B8B8B;
+    font: 13px/14px 'robotomedium';
+    text-decoration: none;
+    display: block;
+    position: relative;
+    transition: all 0.2s linear;
+    &:before {
+      position: absolute;
+    }
+    &.active, &:hover {
+      color: #FFF;
+      background: url("../img/page_bg.jpg") no-repeat #242424;
+    }
+  }
+  .secondary-menu__url--save {
+    background-color: #7b872b;
+    padding: 16px 17px 14px 42px;
+    color: #FFF;
+    &:before {
+      font-size: 15px;
+      left: 20px;
+      top: 14px;
+    }
+  }
+  .secondary-menu__url--help {
+    padding: 16px 15px 14px 27px;
+    &:before {
+      left: 9px;
+    }
+  }
+  .secondary-menu__url--exit {
+    padding: 16px 29px 14px 25px;
+    &:before {
+      left: 6px;
+    }
+  }
+}

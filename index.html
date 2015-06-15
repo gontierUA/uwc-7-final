@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html dir="ltr" lang="en-US" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html dir="ltr" lang="en-US" class="no-js"><!--<![endif]-->
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Photo</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/ie/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header class="container page-header bg-light">
+        <div class="row cf">
+            <a href="#" class="js-mobile-menu-trigger mobile-menu-trigger icon-menu"></a>
+            <ul class="primary-menu">
+                <li class="primary-menu__item">
+                    <a href="#" class="primary-menu__url">
+                        Мои фотографии
+                    </a>
+                </li>
+                <li class="primary-menu__item">
+                    <a href="#" class="primary-menu__url active">
+                        Клипарты
+                    </a>
+                </li>
+                <li class="primary-menu__item">
+                    <a href="#" class="primary-menu__url">
+                        Шаблоны
+                    </a>
+                </li>
+                <li class="primary-menu__item">
+                    <a href="#" class="primary-menu__url">
+                        Фоны
+                    </a>
+                </li>
+                <li class="primary-menu__item">
+                    <a href="#" class="primary-menu__url">
+                        Фотоматериалы
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="secondary-menu">
+                <li class="secondary-menu__item">
+                    <a href="#" class="secondary-menu__url secondary-menu__url--save icon-floppy">
+                        Сохранить
+                    </a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a href="#" class="secondary-menu__url secondary-menu__url--help icon-help">
+                        Помощь
+                    </a>
+                </li>
+                <li class="secondary-menu__item">
+                    <a href="#" class="secondary-menu__url secondary-menu__url--exit icon-cancel">
+                        Выход
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container container--custom-collection">
+        <div class="row">
+            <div class="custom-collection">
+                <ul class="clip-art-list clip-art-list--custom cf" id="sortable-1">
+                    <li class="clip-art-list__item clip-art-list__item--placeholder"></li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="#" class="btn-content-turn-down icon-angle-double-down js-content-turn">
+            Открыть коллекцию клипартов
+        </a>
+    </div> <!-- cliparts -->
+
+    <div id="slideContent" class="slide-content">
+        <div class="container container--tabs">
+            <div class="row">
+                <p class="info-message icon-info">
+                    Выберите подходящие клипарты в галерее с помощью табов и тагов. Сохраните перетащите их в первый
+                    ряд, чтобы всегда иметь под рукой.
+                </p>
+                <ul class="tabs cf">
+                    <li class="tabs__item">
+                        <a href="#tab-war" class="tabs__url js-tab-trigger">
+                            Рода<br>войск
+                        </a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#tab-technic" class="tabs__url js-tab-trigger">
+                            Техника и<br>вооружение
+                        </a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#tab-equip" class="tabs__url js-tab-trigger">
+                            Обмундирование<br>и экипировка
+                        </a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#tab-signs" class="tabs__url js-tab-trigger active">
+                            Эмблемы<br>и знаки
+                        </a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#tab-flags" class="tabs__url js-tab-trigger">
+                            Флаги и<br>знамена
+                        </a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#tab-legends" class="tabs__url js-tab-trigger">
+                            Надписи и<br>украшения
+                        </a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#tab-frames" class="tabs__url js-tab-trigger">
+                            Рамки
+                        </a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#tab-other" class="tabs__url js-tab-trigger">
+                            Разное
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- tabs -->
+
+        <div class="container container--tags bg-light">
+            <div class="row row--tags">
+                <span class="tags-title">Тэги:</span>
+                <ul class="tags-list cf active" data-show-tags="#tab-signs">
+                    <li class="tags-list__item">
+                        <a href="#tag-flags" class="tags-list__url js-tag-trigger">
+                            Флаги
+                        </a>
+                    </li>
+                    <li class="tags-list__item">
+                        <a href="#tag-banners" class="tags-list__url js-tag-trigger">
+                            Знамена
+                        </a>
+                    </li>
+                    <li class="tags-list__item">
+                        <a href="#tag-pennants" class="tags-list__url js-tag-trigger">
+                            Вымпелы
+                        </a>
+                    </li>
+                    <li class="tags-list__item">
+                        <a href="#tag-tapes" class="tags-list__url js-tag-trigger">
+                            Ленты
+                        </a>
+                    </li>
+                    <li class="tags-list__item">
+                        <a href="#tag-strips" class="tags-list__url js-tag-trigger">
+                            Полоски
+                        </a>
+                    </li>
+                    <li class="tags-list__item">
+                        <a href="#tag-squares" class="tags-list__url js-tag-trigger">
+                            Квадраты
+                        </a>
+                    </li>
+                    <li class="tags-list__item">
+                        <a href="#tag-circles" class="tags-list__url js-tag-trigger">
+                            Круги
+                        </a>
+                    </li>
+                    <li class="tags-list__item">
+                        <a href="#tag-triangles" class="tags-list__url js-tag-trigger">
+                            Треугольники
+                        </a>
+                    </li>
+                    <li class="tags-list__item">
+                        <a href="#tag-parallelepipeds" class="tags-list__url js-tag-trigger">
+                            Параллелепипеды
+                        </a>
+                    </li>
+                </ul> <!-- tags-list -->
+
+                <ul class="tags-list cf" data-show-tags="#tab-war">
+                    <li class="tags-list__item">
+                        <a href="#tag-squares" class="tags-list__url js-tag-trigger">
+                            Квадраты
+                        </a>
+                    </li>
+                </ul> <!-- tags-list -->
+            </div>
+        </div> <!-- tags -->
+
+
+        <div class="container container--cliparts">
+            <div class="row row--cliparts">
+                <div class="custom-scroll-cliparts">
+                    <div class="tab-content active" data-tab-content="#tab-signs">
+                        <div class="tags-content" data-tag-content="#tag-banners">
+                            <p class="tags-content__title">Знамена</p>
+                            <ul class="clip-art-list cf" id="sortable-2">
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart1.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart1.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart2.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart2.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart3.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart3.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart4.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart4.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart5.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart5.jpg" width="119" height="119" alt="">
+                                        <p class="item-price icon-dollar">
+                                            250 руб.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart1.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart1.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart2.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart2.jpg" width="119" height="119" alt="">
+                                        <p class="item-price icon-dollar">
+                                            250 руб.
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart3.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart3.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart4.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart4.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tags-content" data-tag-content="#tag-circles">
+                            <p class="tags-content__title">Круги</p>
+                            <ul class="clip-art-list cf" id="sortable-3">
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart1.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart1.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart2.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart2.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart3.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart3.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart4.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart4.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tags-content" data-tag-content="#tag-squares">
+                            <p class="tags-content__title">Квадраты</p>
+                            <ul class="clip-art-list cf" id="sortable-4">
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart1.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart1.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart2.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart2.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart3.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart3.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart4.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart4.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- tab-content -->
+
+                    <div class="tab-content" data-tab-content="#tab-war">
+                        <div class="tags-content" data-tag-content="#tag-squares">
+                            <p class="tags-content__title">Квадраты</p>
+                            <ul class="clip-art-list cf" id="sortable-5">
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart1.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart1.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart2.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart2.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart3.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart3.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                                <li class="clip-art-list__item">
+                                    <a href="upload/cliparts/clipart4.jpg" class="js-show-popup">
+                                        <img src="upload/cliparts/clipart4.jpg" width="119" height="119" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- tab-content -->
+                </div>
+            </div>
+        </div> <!-- tags content -->
+
+        <footer class="container page-footer">
+            <div class="row">
+                <a href="#" class="btn-content-turn-up icon-angle-double-up js-content-turn">Свернуть</a>
+            </div>
+        </footer>
+    </div> <!-- slideContent -->
+
+    <script src="js/app.min.js"></script>
+</body>
+</html>

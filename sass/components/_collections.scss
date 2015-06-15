@@ -1,0 +1,38 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.custom-collection {
+  padding-left: 21px;
+  padding-right: 15px;
+}
+
+.clip-art-list--custom {
+  background: url("../img/add_clipart.png") repeat-x;
+  min-height: 129px;
+  @media (max-width: 1220px) {
+    max-width: 1035px;
+  }
+  @media (max-width: 1090px) {
+    max-width: 900px;
+  }
+  @media (max-width: 970px) {
+    max-width: 775px;
+  }
+  @media (max-width: 830px) {
+    background-repeat: no-repeat;
+  }
+}
+
+.clip-art-list {
+  list-style: none;
+  .clip-art-list__item {
+    float: left;
+    height: 119px;
+    width: 119px;
+    margin: 5px;
+    position: relative;
+  }
+  .clip-art-list__item--placeholder {
+    background: url("../img/add_clipart.png") -5px -5px repeat-x;
+  }
+}

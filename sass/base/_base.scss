@@ -1,0 +1,239 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+html {
+  height: 100%;
+}
+
+body {
+  background: url("../img/page_bg-light.jpg") repeat #242424;
+  height: 100%;
+  min-width: 320px;
+}
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+.slide-content {
+  background: url("../img/page_bg.jpg") repeat #242424;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  &.container--cliparts {
+    padding-top: 10px;
+    padding-bottom: 9px;
+    background-color: rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 0 #454545, inset 0 1px 0 rgba(0, 0, 0, 0.75);
+  }
+  &.container--tags {
+    border-bottom: #090909;
+  }
+  &.container--custom-collection {
+    background: url("../img/page_bg.jpg") repeat #242424;
+    padding-top: 4px;
+    padding-bottom: 12px;
+    position: relative;
+    box-shadow: 0 4px 7px #000;
+  }
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  &.row--tags {
+    padding: 13px 0 12px 57px;
+    min-height: 56px;
+  }
+  &.row--cliparts {
+    padding: 0 8px 0 13px;
+  }
+}
+
+.bg-light {
+  background: $lightBg;
+}
+
+.info-message {
+  color: #FFBA00;
+  font: 13px/15px 'robotoregular';
+  position: relative;
+  margin-left: 34px;
+  padding-left: 21px;
+  margin-bottom: 38px;
+  margin-right: 10px;
+  &:before {
+    color: #252525;
+    background: #FFBA00;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    left: 1px;
+    top: 1px;
+    border-radius: 100%;
+    font-size: 9px;
+    line-height: 12px;
+  }
+}
+
+.btn-content-turn-up {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0px 5px #000;
+  text-decoration: none;
+  color: #FFF;
+  font: 13px/13px 'robotoregular';
+  display: block;
+  margin: 0 auto;
+  width: 135px;
+  height: 39px;
+  text-align: center;
+  position: relative;
+  padding-top: 13px;
+  border-radius: 20px;
+  &:before {
+    position: absolute;
+    right: 24px;
+  }
+}
+
+.btn-content-turn-down {
+  background: url("../img/page_bg.jpg") repeat #242424;
+  position: absolute;
+  color: #898989;
+  text-shadow: 0 -1px 0 #000;
+  font: 13px/13px 'robotoregular';
+  text-decoration: none;
+  width: 246px;
+  height: 25px;
+  box-shadow: 0 4px 7px #000;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -25px;
+  padding-top: 2px;
+  padding-left: 18px;
+  border-radius: 0 0 20px 20px;
+  &:before {
+    position: absolute;
+    right: 19px;
+    top: 2px;
+  }
+}
+
+.page-header {
+  box-shadow: 0 1px 7px #000;
+  @include breakpoint(medium) {
+    padding-left: 60px;
+  }
+  @include breakpoint(small) {
+    padding-top: 50px;
+    padding-left: 0;
+  }
+}
+.page-footer {
+  background: url("../img/page_bg.jpg") repeat #242424;
+  box-shadow: 0 2px 9px #000;
+  padding-top: 20px;
+  padding-bottom: 23px;
+  border-top: 1px solid #454545;
+}
+
+.item-price {
+  color: #FFF;
+  font: 13px/30px 'robotoregular';
+  position: absolute;
+  bottom: 7px;
+  width: 106px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.72);
+  border-radius: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  &:before {
+    color: #0A0A0A;
+    font-size: 16px;
+    line-height: 28px;
+    width: 28px;
+    height: 28px;
+    background-color: #FFD200;
+    border-radius: 100%;
+    float: left;
+    margin: 1px 11px 0 1px;
+  }
+}
+
+.custom-scroll-cliparts {
+  height: 350px;
+  .mCSB_scrollTools {
+    width: 8px;
+    background: #515151;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.31), inset 0 1px 4px #000;
+    .mCSB_draggerRail {
+      background: transparent;
+    }
+    .mCSB_dragger {
+      width: 7px;
+      height: 138px;
+      box-shadow: 0 1px 2px #000, inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      background: #7b872b;
+      border-radius: 3px;
+    }
+  }
+  .mCSB_inside>.mCSB_container {
+    margin-right: 12px;
+  }
+}
+
+.mobile-menu-trigger {
+  color: #7b872b;
+  text-decoration: none;
+  font-size: 30px;
+  position: absolute;
+  display: none;
+  left: 20px;
+  top: 8px;
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  z-index: 100;
+}
+
+.popup-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  z-index: 101;
+  @include breakpoint(medium) {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

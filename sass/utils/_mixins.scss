@@ -1,0 +1,21 @@
+@import 'variables';
+
+// ----- Media-queries ----- //
+$breakpoints: small 460px, medium 992px, large 1500px;
+
+@mixin breakpoint($bp) {
+  // If compile-IE is true (IE8 <=) then just use the desktop overrides and parse them without @media queries
+  @if $compile-IE {
+    @content;
+  }
+    // If compile-IE is false (modern browsers) then parse the @media queries
+  @else {
+    @each $breakpoint in $breakpoints {
+      @if $bp == nth($breakpoint, 1) {
+        @media (max-width: nth($breakpoint, 2)) {
+          @content;
+        }
+      }
+    }
+  }
+}
